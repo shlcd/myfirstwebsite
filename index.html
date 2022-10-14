@@ -16,25 +16,30 @@ gtag('config', 'G-8SV6E17PBE');
 a {color:blue;
 text-decoration: none;}
 h1 {font-size: 45px;
-text-align: center;}
-.saw {color:grey;}
+text-align: center;
+border-bottom: 3px solid black;
+padding:10px;
+margin-bottom:0;
+}
+ol {font-size: 18px;
+  border-right: 2px solid black;
+width:180px;
+margin-top: 0;
+padding: 30px;
+padding-top: 11px;
+}
+body {margin: 15px;}
+#grid {display: grid;
+grid-template-columns: 1fr 5fr;}
+@media(max-width: 800px){
+  #grid {
+  display: block;}
+}
 </style>
 </head>
 <body>
 <h1><a href="index.html" style="color:black">Dior Handbag</a></h1>
-<ol>
-  <li><a href="1.html" class="saw">Lady Dior</a></li>
-  <li><a href="2.html" class="saw">Dior Caro</a></li>
-  <li>Dior Bobby East-West</li>
-  <li>Dior Essential</li>
-  <li><a href="3.html">Saddle</a></li>
-  <li>Lady D-Joy</li>
-  <li>Dior Vibe</li>
-  <li>Dior Book Tote</li>
-  <li>Dior D-Lite</li>
-</ol>
-<!--
-<h1><a href="index.html">Dior Handbag</a></h1>
+<div id="grid">
 <ol>
   <li><a href="1.html">Lady Dior</a></li>
   <li><a href="2.html">Dior Caro</a></li>
@@ -46,11 +51,13 @@ text-align: center;}
   <li>Dior Book Tote</li>
   <li>Dior D-Lite</li>
 </ol>
--->
+<div>
 <h2>Luxury Designer Handbags for Women</h2>
 Designed to be essential in every woman's collection, Dior Women's designer bags combine the vision of Maria Grazia Chiuri with the timeless elegance of the House.<br><br>
 <img src="christiandior.jpg" width="50%">
 <P>
+</div>
+</div>
   <div id="disqus_thread"></div>
 <script>
     /**
