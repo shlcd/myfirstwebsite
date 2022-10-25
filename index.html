@@ -12,18 +12,40 @@ gtag('js', new Date());
 
 gtag('config', 'G-8SV6E17PBE');
 </script>
+<script>
+function nightdayhandler(self){
+if(self.value === 'night')
+{document.querySelector('body').style.backgroundColor='black';
+document.querySelector('body').style.color='white';
+self.value = 'day';
+var alist = document.querySelectorAll('a');
+var i = 0;
+while(i < alist.length){
+    alist[i].style.color = 'gray';
+    i = i + 1;
+}}
+else
+{document.querySelector('body').style.backgroundColor='white';
+document.querySelector('body').style.color='black';
+self.value = 'night';
+var alist = document.querySelectorAll('a');
+var i = 0;
+while(i < alist.length){
+    alist[i].style.color = 'blue';
+    i = i + 1;
+}
+var alist = document.querySelectorAll('a');
+var i = 0;
+while(i < alist.length){
+    alist[0].style.color = 'black';
+    i = i + 1;
+}}}
+</script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <input type="button" value="night" onclick="
-  if(this.value === 'night')
-  {document.querySelector('body').style.backgroundColor='black';
-  document.querySelector('body').style.color='white';
-  this.value = 'day';}
-  else
-  {document.querySelector('body').style.backgroundColor='white';
-  document.querySelector('body').style.color='black';
-  this.value = 'night';}
+  nightdayhandler(this);
   ">
 <h1><a href="index.html" style="color:black">Dior Handbag</a></h1>
 <div id="grid">
