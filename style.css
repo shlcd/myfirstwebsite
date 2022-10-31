@@ -17,7 +17,7 @@ padding-top: 11px;
 body {margin: 15px;}
 #grid {display: grid;
 grid-template-columns: 1fr 5fr;}
-@media(max-width: 800px){
+@media(max-width: 800px)
   #grid {
   display: block;}
 }
