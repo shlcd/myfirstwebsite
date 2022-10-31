@@ -13,27 +13,34 @@ gtag('js', new Date());
 gtag('config', 'G-8SV6E17PBE');
 </script>
 <script>
-function nightdayhandler(self){
-if(self.value === 'night')
-{document.querySelector('body').style.backgroundColor='black';
-document.querySelector('body').style.color='white';
-self.value = 'day';
-var alist = document.querySelectorAll('a');
-var i = 0;
-while(i < alist.length){
-    alist[i].style.color = 'gray';
-    i = i + 1;
-}}
-else
-{document.querySelector('body').style.backgroundColor='white';
-document.querySelector('body').style.color='black';
-self.value = 'night';
-var alist = document.querySelectorAll('a');
-var i = 0;
-while(i < alist.length){
-    alist[i].style.color = 'blue';
-    i = i + 1;
+function LinkSetColor(color){
+  var alist = document.querySelectorAll('a');
+  var i = 0;
+  while(i < alist.length){
+      alist[i].style.color = color;
+      i = i + 1;
+  }
 }
+function BodySetColor(color){
+  document.querySelector('body').style.color=color;
+}
+function BodySetBackgroundColor(color){
+  document.querySelector('body').style.backgroundColor=color;
+}
+function nightdayhandler(self){
+  var target = document.querySelector('body')
+if(self.value === 'night')
+{BodySetBackgroundColor('black');
+BodySetColor('white');
+self.value = 'day';
+LinkSetColor('gray');
+}
+else
+{BodySetBackgroundColor('white');
+BodySetColor('black');
+self.value = 'night';
+LinkSetColor('blue');
+
 var alist = document.querySelectorAll('a');
 var i = 0;
 while(i < alist.length){
