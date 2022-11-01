@@ -1,30 +1,36 @@
-function LinkSetColor(color){
-  var alist = document.querySelectorAll('a');
-  var i = 0;
-  while(i < alist.length){
-      alist[i].style.color = color;
-      i = i + 1;
+var Link = {
+  SetColor:function (color){
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(i < alist.length){
+        alist[i].style.color = color;
+        i = i + 1;
+    }
   }
 }
-function BodySetColor(color){
-  document.querySelector('body').style.color=color;
+
+var Body = {
+  SetColor:function (color){
+    document.querySelector('body').style.color=color;
+  },
+  SetBackgroundColor:function (color){
+    document.querySelector('body').style.backgroundColor=color;
+  }
 }
-function BodySetBackgroundColor(color){
-  document.querySelector('body').style.backgroundColor=color;
-}
+
 function nightdayhandler(self){
   var target = document.querySelector('body')
 if(self.value === 'night')
-{BodySetBackgroundColor('black');
-BodySetColor('white');
+{Body.SetBackgroundColor('black');
+Body.SetColor('white');
 self.value = 'day';
-LinkSetColor('gray');
+Link.SetColor('gray');
 }
 else
-{BodySetBackgroundColor('white');
-BodySetColor('black');
+{Body.SetBackgroundColor('white');
+Body.SetColor('black');
 self.value = 'night';
-LinkSetColor('blue');
+Link.SetColor('blue');
 
 var alist = document.querySelectorAll('a');
 var i = 0;
